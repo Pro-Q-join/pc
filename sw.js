@@ -1,5 +1,5 @@
-// Pro-Q service worker
-const CACHE_NAME = "Pro-Q-cache-v1";
+// PRO-Q service worker
+const CACHE_NAME = "PRO-Q-cache-v1";
 
 self.addEventListener("install", (e) => {
   self.skipWaiting();
@@ -20,7 +20,7 @@ self.addEventListener("activate", (e) => {
 // App se message aane par local notification dikhane ka code
 self.addEventListener("message", (event) => {
   if (event.data && event.data.type === "SHOW_NOTIFICATION") {
-    const title = event.data.title || "Pro-Q Alert";
+    const title = event.data.title || "PRO-Q Alert";
     const options = {
       body: event.data.body || "",
       icon: "logo.png",
